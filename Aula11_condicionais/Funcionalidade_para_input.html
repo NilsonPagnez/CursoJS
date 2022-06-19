@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seu país</h1>
+    Digite seu país: <input type="text" name="txtp" id="txtp"> 
+    <input type="button" value="verificar" onclick="ver()">
+    <div id="res">
+
+    </div>
+</body>
+    <script>
+        function ver() {
+            var pais = document.getElementById('txtp')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você mora em ${pais.value}</p>` //Tive que colocar .value depois do país pois estava dando o erro objectHTMLinputElement.
+            
+            if(pais.value == 'Brasil' || pais.value == 'brasil') {
+                res.innerHTML += 'Você é <strong>brasileiro</strong>'
+
+            }else {
+
+                res.innerHTML += 'Você não é brasileiro'
+
+            }
+
+
+
+        }
+
+
+    </script>
+
+</html>
+
